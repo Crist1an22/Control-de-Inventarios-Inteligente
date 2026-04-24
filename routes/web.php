@@ -1,18 +1,14 @@
 <?php
 
-<<<<<<< HEAD
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\MovimientoController;
 use App\Http\Controllers\DashboardController;
-=======
->>>>>>> 6de8615b9b9aac4f5bcf61efc0360250e0bd8c65
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
@@ -36,10 +32,10 @@ Route::middleware('auth')->group(function () {
     });
     
 });
+
 Route::get('/salir', function() {
     auth()->logout();
     return redirect('/login');
 });
+
 require __DIR__.'/auth.php';
-=======
->>>>>>> 6de8615b9b9aac4f5bcf61efc0360250e0bd8c65
